@@ -1,0 +1,45 @@
+<div class="dashboard">
+{{#if msg}}
+  <div class="modalss" >
+    <div class="modal_content">
+      {{#if msg.img}}
+      <img src="https://www.kindpng.com/picc/m/431-4312134_transparent-success-icon-hd-png-download.png" alt="">
+      {{else }}
+      <img src="https://martinbrainon.com/inicio/wp-content/uploads/2017/04/false-2061132_1280.png" alt="">
+ 
+      {{/if}}
+      
+      <h1 class="content_title">{{msg.text}}</h1>
+      <p class="content_decr">{{msg.decr}}</p>
+      <div class="btn_group">
+        <a href="" class="back_to success">OK</a>
+        <a href="" class="cancel_to danger">Cancel</a>
+      </div>
+    </div>
+  </div>
+  {{else }}
+ 
+  {{/if}}
+  
+  {{>sidebar}}
+  {{>nav}}
+  <div class="contents">
+   
+  </div>
+  <script type="text/javascript"> 
+    document.querySelector(".modal_content").addEventListener("click",(e)=>{
+      e.preventDefault()
+      e.stopPropagation()
+    })
+    document.querySelector(".modalss").addEventListener("click",(e)=>{
+      document.querySelector(".modalss").style.display= "none"
+    })
+    document.querySelector(".cancel_to").addEventListener("click",(e)=>{
+      document.querySelector(".modalss").style.display= "none"
+    })
+    document.querySelector(".back_to").addEventListener("click",(e)=>{
+      document.querySelector(".modalss").style.display= "none"
+    })
+    
+  </script>
+</div>

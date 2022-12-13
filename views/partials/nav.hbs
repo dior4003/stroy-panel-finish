@@ -1,0 +1,44 @@
+<div class="dash_nav">
+  <div class="search_int">
+    <form action="">
+      <input type="search" name="" id="" placeholder="Search..." />
+      <button class="search_btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+
+  </div>
+  <div class="clock"></div>
+  <div class="admin_icon">
+    {{#if admin.img}}
+      <img src="https://tutorzhub.com/images/profile/avatar.png" alt="" />
+
+    {{else}}
+      <img
+        src="https://www.clipartmax.com/png/full/114-1147424_english-a-speech-in-the-new-york-times-newsroom-after-student-circle.png"
+        alt=""
+      />
+    {{/if}}
+
+    <ul class="list_item none">
+      <li>
+        <a href="/admin-setting">
+          <span>Setting</span>
+        </a>
+        
+      </li>
+      <a href="/logout">
+        <li>
+          <span>LogOut</span>
+        </li>
+      </a>
+
+      <li>
+        <span>2</span>
+      </li>
+      <li>
+        <span>4</span>
+      </li>
+    </ul>
+  </div>
+</div>

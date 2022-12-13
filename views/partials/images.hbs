@@ -1,0 +1,15 @@
+<div class="all_image">
+
+  {{#each image}}
+
+    <div class="image_item">
+      <a href="" class="edit"><i class="fa-solid fa-pen"></i></a>
+      <a href="/delete-img/{{this}}" class="delete bg-danger"><i
+          class="fa-solid fa-trash"
+        ></i></a>
+      <img src="./images/{{this}}" alt="" />
+      <span>{{this}}</span>
+
+    </div>
+  {{/each}}
+</div>

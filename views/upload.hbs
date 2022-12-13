@@ -1,0 +1,14 @@
+<div class="dashboard">
+  {{>sidebar}}
+  {{>nav}}
+  <div class="contents">
+    {{#if image}}
+    {{>images}}
+    {{else if img}}
+       <img src="http://localhost:8080/images/{{img}}" alt="">
+    {{else}}
+        {{>uploads}}
+    {{/if}}
+
+  </div>
+</div>

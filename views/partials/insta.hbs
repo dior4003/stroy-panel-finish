@@ -1,0 +1,62 @@
+
+ {{#if posts}}
+ <div class="instagramm">
+     <h2 class="u-align-center u-text u-text-palette-1-dark-1 u-text-1">
+     НОВОСТИ И ПОСТЫ
+    </h2>
+ 
+     <div class="box">
+        <div class="owl-carousel">
+          
+            <!-- First Card -->
+            {{#each posts.data}}
+           
+            <div class="card">
+               
+                <div class="imgBox">
+                    <!-- Main Image -->
+                    <img src={{this.media_url}} class="cover">
+                </div>
+                <!-- Buttons -->
+                <div class="buttons">
+                    <!-- Like Button -->
+                    <img class="icon like" src="https://zupimages.net/up/22/29/d1bd.png">
+                  
+                    <!-- Comment Button -->
+                    <img class="icon" src="https://zupimages.net/up/22/29/h5ft.png">
+                  
+                    <!-- Share Button -->
+                    <a href={{this.permalink}} target="_blank" rel="noopener noreferrer"> <img class="icon" src="https://zupimages.net/up/22/29/9y56.png"></a>
+                    
+                </div>
+              
+                <!-- Number Like -->
+                <h4 class="likes">0 likes</h4>
+              
+                <!-- Description -->
+                <h4 class="message"><b>{{this.username}}</b> 
+Sunset in Khao Lak in Thailand 🌅#sunset</h4>
+                
+            </div>
+            
+            {{/each}}
+
+          
+        </div>
+    </div>
+ </div>
+ {{/if}}
+ 
+<script type="text/javascript">
+    document.querySelector(".like").addEventListener("click", (e) => {
+        let num =parseFloat(document.querySelector(".likes").textContent)
+        if(document.querySelector(".like").src==="https://zupimages.net/up/22/29/d1bd.png"){
+            document.querySelector(".like").src="https://storage.needpix.com/rsynced_images/heart-304085_1280.png"
+            document.querySelector(".likes").textContent=`${num +=1} likes`
+        }else{
+            document.querySelector(".like").src="https://zupimages.net/up/22/29/d1bd.png"
+            document.querySelector(".likes").textContent=`${num -=1} likes`
+        }
+  console.log(parseFloat(document.querySelector(".likes").textContent));
+})
+</script>
