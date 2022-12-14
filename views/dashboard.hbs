@@ -18,13 +18,72 @@
     </div>
   </div>
   {{else }}
- 
+    {{>images}}
   {{/if}}
   
   {{>sidebar}}
   {{>nav}}
   <div class="contents">
-   
+      {{#if len}}
+
+      <div class='contact_counter' >
+        <div class="counter_box">
+          <Link to="/massage">
+            <div class="counter_item">
+                  <h1>
+                     {{len}}
+                  </h1>
+                  <p>Massage</p>
+            </div>
+          </Link>
+          <Link to="/questions">
+            <div class="counter_item">
+                  <h1>
+                      0
+                  </h1>
+                  <p>Questions</p>
+            </div>
+          </Link>
+          <Link to="/notifications">
+            <div class="counter_item">
+                  <h1>
+                      0
+                  </h1>
+                  <p>Notifications</p>
+            </div>
+          </Link>
+        </div>
+        
+      </div>
+          
+      {{/if}}
+      {{#if clients}}
+      <div class="msg_container">
+{{#each clients}}
+        <div class="container-2">
+        <p class="number"><i class="fa-solid fa-phone text-primary fs-5"></i></p>
+        <h2>{{this.name}}</h2>
+        <a rel="noreferrer" target="_blank" href="tel:{{this.email}}">{{this.email}}</a>
+        <p class="text">{{this.massage}}</p>
+        <div class="buttons">
+            <button class='btn-1'>
+              <a href="/contact-delete/{{this.id}}">Delete</a>
+            </button>
+            
+        </div>
+        
+        </div>
+      {{/each}}
+      </div>
+      {{/if}}
+      {{#if slider}}
+      {{>slider}}
+      {{/if}}
+      {{#if user}}
+      {{>setting}}
+      {{/if}}
+
+
   </div>
   <script type="text/javascript"> 
     document.querySelector(".modal_content").addEventListener("click",(e)=>{

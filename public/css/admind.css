@@ -355,13 +355,13 @@
 .u-body .dashboard .contents .contact_counter,
 .u-xl-mode .dashboard .contents .contact_counter {
   width: 100%;
-  height: 8rem;
+  height: 15rem;
   background-color: rgba(194, 194, 194, 0.411);
 }
 .u-body .dashboard .contents .contact_counter .counter_box,
 .u-xl-mode .dashboard .contents .contact_counter .counter_box {
   width: 90%;
-  height: 80%;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -450,7 +450,7 @@
 .u-body .dashboard .contents .msg_container .container-2 .buttons,
 .u-xl-mode .dashboard .contents .msg_container .container-2 .buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 30px;
 }
 .u-body .dashboard .contents .msg_container .container-2 .buttons button,
@@ -582,4 +582,77 @@
   background-color: #e00000;
   color: #fff;
   border-radius: 5px;
+}
+
+.product_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 70vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgb(219, 219, 219) 0%, rgb(228, 228, 228) 100%);
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  text-align: center;
+  position: relative;
+}
+.product_page .product_item {
+  width: 70%;
+  height: 90vh;
+  padding: 30px;
+  margin: 30px;
+  position: relative;
+}
+.product_page .product_item .shape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  transition: 0.4s all linear;
+  z-index: -1;
+}
+.product_page .product_item .product_info {
+  width: 60%;
+  height: 50%;
+  z-index: 99;
+  margin: 10% 20%;
+  transform: translateX(-200%);
+  transition: 1s all linear;
+}
+.product_page .product_item .product_info h1 {
+  color: #ffffff;
+}
+.product_page .product_item .product_info p {
+  color: #fff;
+  font-size: 24px;
+}
+.product_page .product_item:hover .shape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(19, 22, 19, 0.5568627451);
+  z-index: 0;
+}
+.product_page .product_item:hover .product_info {
+  width: 60%;
+  height: 50%;
+  z-index: 99;
+  margin: 10% 20%;
+  transform: translateX(0%);
+}
+.product_page .product_item:hover .product_info h1 {
+  color: #ffffff;
+}
+.product_page .product_item:hover .product_info p {
+  color: #fff;
+  font-size: 24px;
 }/*# sourceMappingURL=admind.css.map */

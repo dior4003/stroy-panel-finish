@@ -1,11 +1,5 @@
   {{>header}}
-<div id="loaders" class="loader_is">
-      <div class="loader_is_item1"></div>
-    </div>
-  
-{{#if slider}}
-    {{>slider}}
-{{else}}
+
 <section class="u-clearfix u-image u-section-2" id="sec-421a">
   <div class="u-clearfix u-sheet u-valign-middle-md u-sheet-1">
     <div
@@ -22,25 +16,23 @@
               <h3
                 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-palette-5-dark-2 u-text-1"
               >
-               Сэндвич-панели высшего класса*
+               Eng yuqori sifatdagi sendvich-panellar*
               </h3>
               <h1
                 class="u-align-center-md u-align-center-sm u-align-center-xs u-custom-font u-font-roboto-condensed u-text u-text-palette-1-dark-1 u-text-2"
               >
-                *Надёжность и экологичность-это 2 и 3 имя наших сэндвич-панелей!
-
+                * Ishonchlilik va ekologik tozalik – bu sendvich panellarimizning ikkinchi va uchunchi nomlaridir!
               </h1>
               <p
                 class="u-align-center-md u-align-center-sm u-align-center-xs u-custom-font u-font-open-sans u-text u-text-palette-5-dark-2 u-text-3"
               >
-                С помощью наших сэндвичных панелей было построено и строятся до сих пор много сооружений, зданий и других объектов. 
-Завод Stroy Panel Uzbekistan находится в городе Ташкент, Узбекистан. &nbsp;<br />
+                Sendvich-panellarimiz yordamida ko‘plab inshootlar, binolar va boshqa ob’ektlar qurildi va hozir ham qurilmoqda. Stroy Panel Uzbekistan zavodi O‘zbekistonning Toshkent shahrida joylashgan. &nbsp;<br />
                 
               </p>
               <a
                 href="tel:+998339194444"
                 class="u-active-palette-1-dark-1 u-border-1 u-border-active-palette-1-dark-1 u-border-hover-palette-1-dark-1 u-border-palette-1-dark-1 u-btn u-btn-rectangle u-button-style u-hover-palette-1-dark-1 u-none u-text-active-grey-10 u-text-body-color u-text-hover-grey-10 u-btn-2"
-              >Заказать</a>
+              >Buyurtma berish</a>
             </div>
           </div>
           <div
@@ -53,17 +45,16 @@
     </div>
   </div>
 </section>
-{{/if}}
-
 <section
   class="u-align-center u-clearfix u-image u-shading u-section-3"
   src=""
   id="carousel_72a3"
 >
   <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-    <h1 class="u-text u-text-1"> Профнастил и металлоконструкция* </h1>
+    <h1 class="u-text u-text-1"> Profnastil va metallokonstruksiya* 
+</h1>
     <p class="u-text u-text-2">
-      *Лучшие и качественные товары от производителя!
+*Biz eng yaxshisi va eng sifatlisi ishlab chiqaramiz!
     </p>
     <div class="u-expanded-width u-list u-list-1">
       <div class="u-repeater u-repeater-1" style="
@@ -72,39 +63,16 @@
               flex-direction: row;
               flex-wrap: wrap;
           ">
-        {{#each cards }}
-        {{!-- {{#each this}} --}}
-             <div
-          class="u-align-center u-container-style u-list-item u-repeater-item u-video-cover u-white"
-        >
-          <div
-            class="u-container-layout u-similar-container u-container-layout-4"
-          >
-          
-            <div
-              alt=""
-              class="u-image u-image-circle u-image-4"
-              data-image-width="800"
-              data-image-height="773"
-              style="background: url({{image}});
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                  "
-            ></div>
-            <h4 class="u-text u-text-6">{{text}}</h4>
-          </div>
-        </div>
-          {{!-- {{/each}} --}}
-       
+        {{#each cards}}
+          {{>cardimage}}
         {{/each}}
       </div>
     </div>
 
     <a
-      href="/product"
+      href="tel:+99833 9194444"
       class="u-border-2 u-border-white u-btn u-btn-rectangle u-button-style u-btn-2"
-    >Дальше читать</a>
+    >Ko'proq o'qish</a>
   </div>
 </section>
 <section class="u-clearfix u-section-4" id="carousel_666c">
@@ -178,10 +146,12 @@
         <h1
           class="u-custom-font u-font-roboto-condensed u-text u-text-palette-5-dark-1 u-text-1"
         >
-          О нашей компании
+          KOMPANIYA HAQIDA.
+
         </h1>
         <p class="u-text u-text-2">
-         Stroy Panel Uzbekistan является одной из лидирующих производителей в своей сфере, а именно производство и монтаж сэндвич-панелей в Узбекистане.
+         Stroy Panel Uzbekistan o'z sohasida, ya'ni sendvich panellar ishlab chiqarish va o'rnatish bo'yicha yetakchi liderlardan biridir.
+
         </p>
         {{!-- <a href="#" class="u-btn u-button-style u-palette-3-base u-btn-1">Читать дальше</a> --}}
         
@@ -189,9 +159,10 @@
     </div>
   </div>
 </section>
+
  <div class="instagramm">
     <h2 class="u-align-center u-text u-text-palette-1-dark-1 u-text-1">
-      НОВОСТИ И ПОСТЫ
+     Yangiliklar va postlar
     </h2>
     {{>insta}}
  </div>
@@ -440,7 +411,7 @@
                      Stroy Panel Uzbekistan
                   </h2>
                   <p class="u-text u-text-2">
-                   На основе наших сэндвичных панелей построилось и строится большое количество объектов и сооружений. Наш завод находится в г. Ташкенте, а наша профессиональная команда высококвалифицированных специалистов сообща следят за строгим контролем безопасности и качества наших изделий.
+Faqatgina bizning mahsulotlarimiz emas bizning xodimlarimiz ham yuqori darajada o’z xizmatlarini taklif qilishadi. Malakali mutaxasislardan tarkib topgan tajribali xodimlarimiz har bir ishni bajarilishida mukammalik, mustahkamlik va astoydil bajarilishini ta’milashadi, o’z o’rnida xavfsizlik hamda sifat kafolatini nazorat qilib turishadi.  
                   </p>
                  
                 </div>
@@ -456,7 +427,7 @@
                   <h1
                     class="u-align-left u-custom-font u-font-roboto-condensed u-text u-text-palette-3-base u-text-4"
                   >
-                    О нас
+                    Biz haqimizda
                   </h1>
                   <img
                     class="u-expanded-width u-image u-image-2"
@@ -465,7 +436,9 @@
                     data-image-height="900"
                   />
                   <p class="u-align-left u-text u-text-5">
-                    Вся наша продукция отвечает всем полагающимся нормам, а ставку мы делаем на очень высокое качество наших товаров.
+                    Stroy Panel Uzbekistanning barcha xizmat va mahsulotlari xalqaro standartlarga bemalol javob bera oladi..
+"Har bir mijoz uchun alohida qadriyat va hurmat"-aynan shu qoidaga amal qilgan holda bizning kompaniya mijozlar uchun o’z xizmati, muammolariga yechim va qarorlarni taklif qiladi.  
+
                   </p>
                   
                 </div>
@@ -482,11 +455,10 @@
     class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xl u-sheet-1"
   >
     <h1 class="u-text u-text-palette-1-dark-1 u-text-1">
-     Многолетний опыт
+    Uzoq yillik tajriba
     </h1>
     <p class="u-text u-text-2">
-      Сэндвич панели от Stroy Panel Uzbekistan популярны благодаря своим высоким эксплуатационным свойствам и техническим характеристикам, за счет чего применение наших изделий имеет огромное количество преимуществ, например, наша продукция – это противопожарные сэндвич панели и сэндвич панели с утеплением, с высокой экологичностью.
-    </p>
+Stroy Panel Uzbekistan ko'p yillardan buyon bozorda mavjud bo'lib, yuqori unumdorligi va texnik xususiyatlari tufayli mashhurdir    </p>
     <div class="u-shape u-shape-svg u-text-palette-4-light-1 u-shape-1">
       <svg
         class="u-svg-link"
@@ -602,10 +574,9 @@
               <div
                 class="u-container-layout u-valign-middle u-container-layout-1"
               >
-                <h2 class="u-text u-text-1">Монтаж сэндвич панели, металлоконструкции и профнастил</h2>
+                <h2 class="u-text u-text-1">Sendvich panellar, metall konstruktsiyalar va gofrokartonni o'rnatish</h2>
                 <p class="u-text u-text-2">
-                 Мы выполняем качественный монтаж сэндвич панели, металлоконструкции и профнастил.
-Правильный монтаж сэндвич-панелей это один из решающих факторов, определяющих прочность и долговечность здания.
+                 Biz sendvich panellar, metall konstruktsiyalar va gofrokartonni yuqori darajada proffesionalik bilan o'rnatib beramiz.Sandvich panellarni to'g'ri o'rnatish binoning mustahkamligini belgilovchi  omillardan biridir.
                 </p>
                 
               </div>
@@ -652,7 +623,7 @@
                       ></path>
                     </g></svg></span>
                 <p class="u-text u-text-3">
-                 Поэтому большое значение следует уделять не только качеству самих сэндвич-панелей, но и сопутствующих материалов – доборных элементов и комплектующих. И, главное, процесс должен быть выполнен квалифицированными специалистами, ведь ошибки могут привести к негативным последствиям и повреждениям конструкции.
+                 Shuning uchun, faqat sendvich panellarning sifatiga emas, balki qo'shimcha materiallarga - qo'shimcha elementlarga va komponentlarga ham katta ahamiyat berish kerak. Va, eng muhimi, jarayonni malakali mutaxassislar amalga oshirishi kerak, chunki xatolar salbiy oqibatlarga olib kelishi va tuzilishga zarar etkazishi mumkin.
                 </p>
               </div>
             </div>
@@ -730,7 +701,7 @@
                       >Name</label>
                       <input
                         type="text"
-                        placeholder="Введите ваше имя"
+                        placeholder="Ismingizni kiriting"
                         id="name-3b9a"
                         name="name"
                         class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1"
@@ -757,7 +728,7 @@
                         class="u-form-control-hidden u-label"
                       >Message</label>
                       <textarea
-                        placeholder="Введите сообщение"
+                        placeholder="Fikr va takliflaringizni qoldiring"
                         rows="4"
                         cols="50"
                         id="message-3b9a"
@@ -773,7 +744,7 @@
                       >Submit</a> --}}
                       <input
                         type="submit"
-                        value="Отправить"
+                        value="Jo'natish"
                         class="u-btn u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-3-base u-btn-1"
                       />
                     </div>
@@ -804,11 +775,11 @@
                 class="u-container-layout u-valign-middle u-container-layout-2"
               >
                 <h6 class="u-text u-text-grey-50 u-text-1">
-                  Подпишитесь на нашу рассылку
+                  Bizni kuzatib boring
                 </h6>
-                <h2 class="u-text u-text-grey-70 u-text-2">Свяжитесь с нами</h2>
+                <h2 class="u-text u-text-grey-70 u-text-2">Biz bilan bog'lanish</h2>
                 <p class="u-text u-text-grey-50 u-text-3">
-                  г.Ташкент. Сергилинский район. Ул. Чочтепа, Центр махалли<br />Наш контакт<br>
+                  Toshkent shahri. Sergili tumani. ko'cha. Chochtepa, Mahalla Markazi<br />Biz bilan aloqa<br>
                   <a href="tel:+998339194444">   +99833 9194444</a><br>
                   <a href="tel:+998996847777">   +99899 6847777</a>
                   <br />
@@ -827,7 +798,7 @@
               <div
                 class="u-container-layout u-valign-middle u-container-layout-3"
               >
-                <h2 class="u-text u-text-grey-70 u-text-4">Подписывайтесь на нас</h2>
+                <h2 class="u-text u-text-grey-70 u-text-4">Ijtimoiy tarmoqlarda bizni kuzatib boring</h2>
                 <div class="u-social-icons u-spacing-20 u-social-icons-1">
                   <a
                     class="u-social-url"
@@ -985,4 +956,4 @@
   </div>
 </section>
 {{>about}}
-  {{>footer}}
+  {{>footeruz}}

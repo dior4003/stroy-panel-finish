@@ -1,0 +1,31 @@
+<div id="slider">
+  <div class="slides">
+
+    {{#each slider}}
+    <!-- First slide -->
+    <div class="slider">
+      <div class="legend"></div>
+      <div class="contenta">
+        <div class="content-txt">
+          <h1> {{this.title}} </h1>
+          <h2> {{this.decr}} </h2>
+        </div>
+      </div>
+      <div
+        class="images"
+        style="
+    background: url({{this.img}});
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: right;
+"
+      >
+        {{! <img src="./images/photo_2022-12-07_14-09-56.jpg" /> }}
+      </div>
+    </div>
+{{/each}}
+
+  </div>
+</div>

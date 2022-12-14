@@ -1,0 +1,94 @@
+{{>header}}
+
+<div class="product_page">
+     <div class="coverflow">
+         {{#each cards}}
+        <div class="content">
+            <div class="front">
+            <img src={{this.image}}>
+            <div class="info">
+                <p>{{this.text}}</p>
+            </div>
+            </div>
+            <div class="back">
+            <p>{{this.decr}}</p>
+            </div>
+        </div>
+    {{/each}} 
+     </div>
+    
+   
+ 
+  {{!-- <div class="content">
+    <div class="front">
+      <img src="https://picsum.photos/seed/b/400/600">
+      <div class="info">
+        <p>Item 2</p>
+      </div>
+    </div>
+    <div class="back">
+      <h2>Details about Item 2</h2>
+    </div>
+  </div>
+  <div class="content">
+    <div class="front">
+      <img src="https://picsum.photos/seed/c/400/600">
+      <div class="info">
+        <p>Item 3</p>
+      </div>
+    </div>
+    <div class="back">
+      <h2>Details about Item 3</h2>
+    </div>
+  </div>
+  <div class="content">
+    <div class="front">
+      <img src="https://picsum.photos/seed/d/400/600">
+      <div class="info">
+        <p>Item 4</p>
+      </div>
+    </div>
+    <div class="back">
+      <h2>Details about Item 4</h2>
+    </div>
+  </div>
+  <div class="content">
+    <div class="front">
+      <img src="https://picsum.photos/seed/e/400/600">
+      <div class="info">
+        <p>Item 5</p>
+      </div>
+    </div>
+    <div class="back">
+      <h2>Details about Item 5</h2>
+    </div>
+  </div>
+  <div class="content">
+    <div class="front">
+      <img src="https://picsum.photos/seed/f/400/600">
+      <div class="info">
+        <p>Item 6</p>
+      </div>
+    </div>
+    <div class="back">
+      <h2>Details about Item 6</h2>
+    </div>
+  </div>
+  <div class="content">
+    <div class="front">
+      <img src="https://picsum.photos/seed/g/400/600">
+      <div class="info">
+        <p>Item 7</p>
+      </div>
+    </div>
+    <div class="back">
+      <h2>Details about Item 7</h2>
+    </div>
+  </div> --}}
+{{!-- </div> --}}
+   
+</div>
+
+
+
+{{>footer}}
