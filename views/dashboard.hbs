@@ -77,10 +77,16 @@
       </div>
       {{/if}}
       {{#if slider}}
+        <div class="btn_div">
+            <a href="/add-slider">Add Slider Banner</a>
+        </div>
       {{>slider}}
       {{/if}}
       {{#if user}}
       {{>setting}}
+      {{/if}}
+      {{#if sliderForm}}
+      {{>slideform}}
       {{/if}}
 
 

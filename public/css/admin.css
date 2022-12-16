@@ -76,3 +76,17 @@ html {
   top: 0px;
   z-index: 1;
 }
+
+.create-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.mmt{
+  margin-top: 20px;
+}

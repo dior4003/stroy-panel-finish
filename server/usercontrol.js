@@ -6,6 +6,7 @@ const testFolder = "./public/images/";
 const Contact = require("./schema/contactSchema");
 const fs = require("fs-extra");
 const saltRounds = 10;
+const Banner = require("./schema/bannerSchema");
 const TelegramBot = require("node-telegram-bot-api");
 const Product = require("./schema/productSchema");
 const Insta = require("./schema/instaSchema");
@@ -68,41 +69,46 @@ exports.view = async (req, res) => {
   Доступны разные типы туникабондов. Мы производим качественные и недорогие туникабонды в Ташкенте.`,
     },
   ];
-  let slider = [
-    {
-      img: "./images/photo_2022-12-10_14-36-00.jpg",
-      title: "your Title",
-      decr: "your decription",
-    },
-    {
-      img: "./images/photo_2022-12-10_14-36-11.jpg",
-      title: "your Title",
-      decr: "your decription",
-    },
-    {
-      img: "./images/photo_2022-12-10_14-36-19.jpg",
-      title: "your Title",
-      decr: "your decription",
-    },
-    {
-      img: "./images/photo_2022-12-10_14-36-02.jpg",
-      title: "your Title",
-      decr: "your decription",
-    },
-    {
-      img: "./photo_2022-12-10_14-36-19.jpg",
-      title: "your Title",
-      decr: "your decription",
-    },
-  ];
+  let slider;
+  // let slider = [
+  //   {
+  //     img: "./images/photo_2022-12-10_14-36-00.jpg",
+  //     title: "your Title",
+  //     decr: "your decription",
+  //   },
+  //   {
+  //     img: "./images/photo_2022-12-10_14-36-11.jpg",
+  //     title: "your Title",
+  //     decr: "your decription",
+  //   },
+  //   {
+  //     img: "./images/photo_2022-12-10_14-36-19.jpg",
+  //     title: "your Title",
+  //     decr: "your decription",
+  //   },
+  //   {
+  //     img: "./images/photo_2022-12-10_14-36-02.jpg",
+  //     title: "your Title",
+  //     decr: "your decription",
+  //   },
+  //   {
+  //     img: "./photo_2022-12-10_14-36-19.jpg",
+  //     title: "your Title",
+  //     decr: "your decription",
+  //   },
+  // ];
   // let cards;
   // await Product.find().then(async (card) => {
   //   cards = card;
   // });
+  await Banner.find().then((slide) => {
+    slider = slide;
+  });
+  console.log(slider);
   console.log(cards[0].image);
   await Insta.find().then((post) => {
     const posts = post[0].insta;
-    res.render("home", { posts, cards });
+    res.render("home", { posts, cards, slider });
   });
 };
 exports.viewuz = (req, res) => {
@@ -147,7 +153,7 @@ exports.slider = (req, res) => {
   let slider = [
     {
       img: "./images/photo_2022-12-10_14-36-00.jpg",
-      title: "your Title",
+      title: "your Title ",
       decr: "your decription",
     },
     {
@@ -194,7 +200,7 @@ exports.updInsta = async (req, res) => {
           function (err, result) {
             if (!err) {
               console.log("updated");
-              res.render("dashboard", {
+              res.redirect("/dashboard", {
                 msg: {
                   type: true,
                   img: false,
@@ -217,6 +223,9 @@ exports.updInsta = async (req, res) => {
 
 exports.admin = (req, res) => {
   res.render("admin");
+};
+exports.addbanner = (req, res) => {
+  res.render("dashboard", { sliderForm :true});
 };
 exports.product = (req, res) => {
   let cards = [
@@ -336,6 +345,54 @@ exports.uploadGet = async (req, res) => {
     res.status(200).render("page404");
   }
 };
+
+exports.sliderform =async (req, res) => {
+  const {
+    title1,
+    title2,
+    title3,
+    title4,
+    img1,
+    img2,
+    img3,
+    img4,
+    decr1,
+    decr2,
+    decr3,
+    decr4,
+  } = req.body;
+  const slid = [
+    {
+      title: title1,
+      img: img1,
+      decr: decr1,
+    },
+    {
+      title: title2,
+      img: img2,
+      decr: decr2,
+    },
+    {
+      title: title3,
+      img: img3,
+      decr: decr3,
+    },
+    {
+      title: title4,
+      img: img4,
+      decr: decr4,
+    },
+  ];
+  const ss = await new Banner(slid);
+
+  await ss;
+  save().then((data) => {
+    res.send("ok")
+    console.log(data);
+  });
+
+};
+
 exports.dashboard = async (req, res) => {
   if (localStorage.getItem("admin")) {
     Contact.find().then((client) => {

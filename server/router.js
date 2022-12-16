@@ -21,6 +21,8 @@ router.get("/logout", userController.logout);
 router.get("/upload", userController.uploadGet);
 router.get("/dashboard", userController.dashboard);
 router.post("/login", userController.login);
+router.post("/add-banner", userController.sliderform);
+router.get("/add-slider", userController.addbanner);
 router.post("/login-upd", userController.updpass);
 router.post("/user-contact", userController.userContact);
 router.get("*", userController.notFound);
