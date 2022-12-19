@@ -185,11 +185,12 @@ exports.updInsta = async (req, res) => {
   if (localStorage.getItem("admin")) {
     axios({
       method: "get",
-      url: "https://v1.nocodeapi.com/stroypanel/instagram/KozEuMpXWFAYiMqF?limit=9999999",
+      url: "https://v1.nocodeapi.com/stroypanel/instagram/KozEuMpXWFAYiMqF?limit=999999999",
       params: {},
     })
       .then(async function (response) {
         const insta = await new Insta({
+          _id: "6394ceb374e615b5a8b65b8a",
           insta: response.data,
         });
         await insta.update(
@@ -200,12 +201,7 @@ exports.updInsta = async (req, res) => {
           function (err, result) {
             if (!err) {
               console.log("updated");
-              res.redirect("/dashboard", {
-                msg: {
-                  type: true,
-                  img: false,
-                },
-              });
+              res.redirect("/dashboard");
             }
           }
         );
