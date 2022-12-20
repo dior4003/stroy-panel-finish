@@ -7,7 +7,8 @@ router.get("/", userController.view);
 router.get("/uz", userController.viewuz);
 router.get("/product", userController.product);
 router.get("/login", userController.admin);
-router.get("/delete-img/:id", userController.deleteImg);
+router.get("/delete-img/:id", userController.productId);
+router.get("/product/:id", userController.deleteImg);
 
 router.get("/contact-delete/:id", userController.deleteCont);
 router.get("/img/", userController.imgone);

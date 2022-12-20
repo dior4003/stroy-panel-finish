@@ -111,6 +111,7 @@ exports.view = async (req, res) => {
     res.render("home", { posts, cards, slider });
   });
 };
+exports.productId = (req, res) => {};
 exports.viewuz = (req, res) => {
   let cards = [
     {
@@ -189,22 +190,25 @@ exports.updInsta = async (req, res) => {
       params: {},
     })
       .then(async function (response) {
-        const insta = await new Insta({
+        const insta = {
           _id: "6394ceb374e615b5a8b65b8a",
           insta: response.data,
-        });
-        await insta.update(
+        };
+        Insta.updateOne(
+          { _id: "6394ceb374e615b5a8b65b8a" },
           {
-            status: "0",
-          },
-
-          function (err, result) {
-            if (!err) {
-              console.log("updated");
-              res.redirect("/dashboard");
-            }
+            insta: response.data,
           }
-        );
+        )
+          .then((result) => {
+            console.log(result);
+            console.log("true");
+            res.redirect("/dashboard");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+
         console.log("data successfuly update");
       })
 
@@ -221,7 +225,7 @@ exports.admin = (req, res) => {
   res.render("admin");
 };
 exports.addbanner = (req, res) => {
-  res.render("dashboard", { sliderForm :true});
+  res.render("dashboard", { sliderForm: true });
 };
 exports.product = (req, res) => {
   let cards = [
@@ -342,7 +346,7 @@ exports.uploadGet = async (req, res) => {
   }
 };
 
-exports.sliderform =async (req, res) => {
+exports.sliderform = async (req, res) => {
   const {
     title1,
     title2,
@@ -383,10 +387,9 @@ exports.sliderform =async (req, res) => {
 
   await ss;
   save().then((data) => {
-    res.send("ok")
+    res.send("ok");
     console.log(data);
   });
-
 };
 
 exports.dashboard = async (req, res) => {
