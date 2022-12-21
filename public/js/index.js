@@ -27,7 +27,6 @@ mform.addEventListener("click", () => {
   mform.classList.remove("mopen");
 });
 mform.querySelector("form").addEventListener("click", (e) => {
-  e.preventDefault();
   e.stopPropagation();
 });
 

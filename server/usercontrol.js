@@ -145,7 +145,7 @@ exports.viewuz = (req, res) => {
       text: "Tunikablog",
     },
   ];
-  localStorage.setItem("lang" , "uz")
+  localStorage.setItem("lang", "uz");
   Insta.find().then((post) => {
     const posts = post[0].insta;
     res.render("homeuz", { posts, cards });
@@ -227,6 +227,9 @@ exports.admin = (req, res) => {
 };
 exports.addbanner = (req, res) => {
   res.render("dashboard", { sliderForm: true });
+};
+exports.thanks = (req, res) => {
+  res.render("thanks");
 };
 exports.product = (req, res) => {
   let cards = [
@@ -441,14 +444,11 @@ exports.userContact = async (req, res) => {
     await note
       .save()
       .then((data) => {
-        res.render("home", { success: true });
+        res.redirect("/thanks");
         console.log("post");
       })
       .catch((err) => {
-        res.status(500).send({
-          message:
-            err.message || "Some error occurred while creating the Note.",
-        });
+        res.status(500).redirect("/error");
       });
   } else {
     res.status(404).render("page404");

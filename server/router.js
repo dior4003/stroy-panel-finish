@@ -12,6 +12,7 @@ router.get("/product/:id", userController.deleteImg);
 
 router.get("/contact-delete/:id", userController.deleteCont);
 router.get("/img/", userController.imgone);
+router.get("/thanks", userController.thanks);
 
 router.get("/all", userController.allFiles);
 router.get("/slider", userController.slider);
