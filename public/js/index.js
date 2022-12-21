@@ -17,6 +17,20 @@
 
 // --- various fiddle bit - have a play
 
+const mform = document.querySelector("#mform");
+
+const mbtn = document.querySelector(".contact_btn");
+mbtn.addEventListener("click", () => {
+  mform.classList.add("mopen");
+});
+mform.addEventListener("click", () => {
+  mform.classList.remove("mopen");
+});
+mform.querySelector("form").addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+});
+
 const OVERLAP = 0.25; // of width
 const ROTATION = 45; // degrees
 const DELAY = 250; // milliseconds - for various animations

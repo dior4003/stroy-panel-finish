@@ -145,6 +145,7 @@ exports.viewuz = (req, res) => {
       text: "Tunikablog",
     },
   ];
+  localStorage.setItem("lang" , "uz")
   Insta.find().then((post) => {
     const posts = post[0].insta;
     res.render("homeuz", { posts, cards });

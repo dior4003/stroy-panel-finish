@@ -177,30 +177,13 @@ img {
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-}
+
 
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-button,
-input {
-  /* 1 */
-  overflow: visible;
-}
+
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -369,20 +352,7 @@ template {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-  color: #555555;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  line-height: 1.875;
-  font-weight: 400;
-  word-break: break-word;
-  box-sizing: border-box;
-}
+
 
 body.dark-scheme {
   color: #a3a3a3;
@@ -1243,50 +1213,6 @@ td {
   border-color: #fff;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-  color: #555555;
-  border: none;
-  background: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 8px 10px;
-  box-sizing: border-box;
-  outline: none;
-  font-size: 14px;
-  font-weight: 500;
-}
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-  color: #555555;
-}
 
 select {
   border: none;
@@ -1301,77 +1227,14 @@ textarea {
   vertical-align: top;
 }
 
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #555555;
-}
 
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #555555;
-}
-
-:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #555555;
-}
 
 :-moz-placeholder {
   /* Firefox 18- */
   color: #555555;
 }
 
-/*Dark Scheme*/
-.dark-scheme input[type="text"],
-.dark-scheme input[type="email"],
-.dark-scheme input[type="url"],
-.dark-scheme input[type="password"],
-.dark-scheme input[type="search"],
-.dark-scheme input[type="number"],
-.dark-scheme input[type="tel"],
-.dark-scheme input[type="range"],
-.dark-scheme input[type="date"],
-.dark-scheme input[type="month"],
-.dark-scheme input[type="week"],
-.dark-scheme input[type="time"],
-.dark-scheme input[type="datetime"],
-.dark-scheme input[type="datetime-local"],
-.dark-scheme input[type="color"],
-.dark-scheme textarea {
-  color: #a3a3a3;
-  background: transparent;
-  border-bottom-color: #292929;
-}
-.dark-scheme input[type="text"]:focus,
-.dark-scheme input[type="email"]:focus,
-.dark-scheme input[type="url"]:focus,
-.dark-scheme input[type="password"]:focus,
-.dark-scheme input[type="search"]:focus,
-.dark-scheme input[type="number"]:focus,
-.dark-scheme input[type="tel"]:focus,
-.dark-scheme input[type="range"]:focus,
-.dark-scheme input[type="date"]:focus,
-.dark-scheme input[type="month"]:focus,
-.dark-scheme input[type="week"]:focus,
-.dark-scheme input[type="time"]:focus,
-.dark-scheme input[type="datetime"]:focus,
-.dark-scheme input[type="datetime-local"]:focus,
-.dark-scheme input[type="color"]:focus,
-.dark-scheme textarea:focus {
-  color: #a3a3a3;
-}
-.dark-scheme ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #a3a3a3;
-}
-.dark-scheme ::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #a3a3a3;
-}
-.dark-scheme :-ms-input-placeholder {
-  /* IE 10+ */
-  color: #a3a3a3;
-}
+
 .dark-scheme :-moz-placeholder {
   /* Firefox 18- */
   color: #a3a3a3;
@@ -3234,10 +3097,7 @@ a:active {
 .comment-form .logged-in-as a {
   color: #555555;
 }
-.comment-form input[type="text"],
-.comment-form input[type="email"] {
-  width: 100%;
-}
+
 .comment-form .octf-btn {
   margin-top: 10px;
 }
@@ -5702,10 +5562,7 @@ object {
   padding-bottom: 10px;
 }
 
-.member-form input[type="text"],
-.member-form input[type="email"] {
-  width: 100%;
-}
+
 .member-form .octf-btn {
   margin-top: 10px;
 }
@@ -6337,15 +6194,8 @@ object {
 .wpcf7 .main-form .font14 {
   margin-bottom: 24px;
 }
-.wpcf7 .main-form input,
-.wpcf7 .main-form textarea {
-  width: 100%;
-  background: #fff;
-}
-.wpcf7 .main-form input::placeholder,
-.wpcf7 .main-form textarea::placeholder {
-  text-transform: uppercase;
-}
+
+
 .wpcf7 .main-form button {
   margin-top: 15px;
 }
@@ -6461,10 +6311,7 @@ object {
   background: #505050;
 }
 
-.dark-scheme .wpcf7 .main-form input,
-.dark-scheme .wpcf7 .main-form textarea {
-  background: transparent;
-}
+
 .dark-scheme .wpcf7 .main-form button {
   background: #1a1a1a;
   color: #fff;
@@ -6836,32 +6683,14 @@ div.elementor-widget-heading .elementor-heading-title {
   -webkit-box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.1);
 }
-.octf-cta-header .h-search-form-field .h-search-form-inner input {
-  background: transparent;
-  color: #fff;
-  font-weight: 400;
-  border-color: rgba(255, 255, 255, 0.1);
-}
+
 .octf-cta-header .h-search-form-field .h-search-form-inner button {
   color: #fff;
 }
 .octf-cta-header .h-search-form-field .h-search-form-inner button i:before {
   font-weight: normal;
 }
-.octf-cta-header
-  .h-search-form-field
-  .h-search-form-inner
-  ::-webkit-input-placeholder {
-  /* Edge */
-  color: #fff;
-}
-.octf-cta-header
-  .h-search-form-field
-  .h-search-form-inner
-  :-ms-input-placeholder {
-  /* Internet Explorer */
-  color: #fff;
-}
+
 .octf-cta-header .h-search-form-field .h-search-form-inner ::placeholder {
   color: #fff;
 }
@@ -10196,17 +10025,7 @@ ol.style-default li:last-child {
 .mc4wp-form-fields .subscribe-inner-form {
   position: relative;
 }
-.mc4wp-form-fields .subscribe-inner-form input[type="email"] {
-  height: 46px;
-  width: 100%;
-  background: transparent;
-  color: #b1b0b0;
-  border-color: rgba(255, 255, 255, 0.1);
-  padding-right: 56px;
-}
-.mc4wp-form-fields .subscribe-inner-form input[type="email"]::placeholder {
-  color: #b1b0b0;
-}
+
 .mc4wp-form-fields .subscribe-inner-form .subscribe-btn-icon {
   background: transparent;
   border: none;
