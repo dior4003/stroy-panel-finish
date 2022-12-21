@@ -2593,6 +2593,15 @@
     --content-height: calc(60vh / var(--content-card-scale) * 2 / 3);
     --font-size: calc(5px + 10vh / 50);
   }
+  .mform {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #e6f093;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .info_maps {
     position: absolute;
     top: 0%;
