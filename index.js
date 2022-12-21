@@ -9,7 +9,7 @@ var fs = require("fs-extra");
 require("dotenv").config();
 const admin = express();
 // console.log(localStorage.getItem("admin"));
-const port = 8080;
+const port = process.env.PORT||3002;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
