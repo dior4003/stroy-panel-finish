@@ -178,12 +178,10 @@ img {
  * 2. Remove the margin in Firefox and Safari.
  */
 
-
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -352,7 +350,6 @@ template {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-
 
 body.dark-scheme {
   color: #a3a3a3;
@@ -1213,7 +1210,6 @@ td {
   border-color: #fff;
 }
 
-
 select {
   border: none;
   background: #fff;
@@ -1227,13 +1223,10 @@ textarea {
   vertical-align: top;
 }
 
-
-
 :-moz-placeholder {
   /* Firefox 18- */
   color: #555555;
 }
-
 
 .dark-scheme :-moz-placeholder {
   /* Firefox 18- */
@@ -5502,7 +5495,6 @@ object {
   padding-bottom: 10px;
 }
 
-
 .member-form .octf-btn {
   margin-top: 10px;
 }
@@ -5681,6 +5673,16 @@ object {
 }
 .projects-grid .projects-box:hover .portfolio-info {
   opacity: 1;
+}
+@media (max-width: 768px) {
+  .projects-grid .projects-box .portfolio-info {
+    opacity: 1;
+  }
+  .projects-grid.style-2 .projects-box .portfolio-info-inner {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 .projects-grid.style-2 .portfolio-info {
   background: none;
@@ -6135,7 +6137,6 @@ object {
   margin-bottom: 24px;
 }
 
-
 .wpcf7 .main-form button {
   margin-top: 15px;
 }
@@ -6250,7 +6251,6 @@ object {
 .rs-layer .btn-details:before {
   background: #505050;
 }
-
 
 .dark-scheme .wpcf7 .main-form button {
   background: #1a1a1a;
@@ -10462,4 +10462,14 @@ ol.style-default li:last-child {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .projects-grid .projects-box .portfolio-info {
+    opacity: 1;
+  }
+  .projects-grid.style-2 .projects-box .portfolio-info-inner {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
 }

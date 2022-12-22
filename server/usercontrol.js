@@ -11,7 +11,7 @@ const TelegramBot = require("node-telegram-bot-api");
 const Product = require("./schema/productSchema");
 const Insta = require("./schema/instaSchema");
 const axios = require("axios");
-const token = "5777250834:AAGaNZDkl_Z8R-B6HonPYDV6_xJvqrM5ZSQ";
+const token = "5945996729:AAGnN4rnsPa1nCRbDw9-1l97xVgLj-tSyDA";
 
 const bot = new TelegramBot(token, { polling: true });
 const Admin = require("./schema/adminSchema");
@@ -395,7 +395,10 @@ exports.sliderform = async (req, res) => {
     console.log(data);
   });
 };
-
+bot.on("message", (msg) => {
+  bot.sendMessage(msg.chat.id);
+  console.log(msg);
+});
 exports.dashboard = async (req, res) => {
   if (localStorage.getItem("admin")) {
     Contact.find().then((client) => {
@@ -422,7 +425,7 @@ exports.userContact = async (req, res) => {
     const { name, phone, message } = req.body;
     bot.on("message", (msg) => {
       bot.sendMessage(msg.chat.id);
-      // console.log(msg);
+      console.log(msg);
     });
     bot.sendMessage(
       -838756959,

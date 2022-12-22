@@ -876,5 +876,19 @@ Stroy Panel Uzbekistan ko'p yillardan buyon bozorda mavjud bo'lib, yuqori unumdo
     </div>
   </div>
 </section>
+   <script>
+    const mform = document.querySelector("#mform");
+
+    const mbtn = document.querySelector(".contact_btn");
+    mbtn.addEventListener("click", () => {
+      mform.classList.add("mopen");
+    });
+    mform.addEventListener("click", () => {
+      mform.classList.remove("mopen");
+    });
+    mform.querySelector("form").addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+   </script>
 {{>about}}
   {{>footeruz}}
