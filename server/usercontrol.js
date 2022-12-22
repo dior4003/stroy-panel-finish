@@ -395,10 +395,10 @@ exports.sliderform = async (req, res) => {
     console.log(data);
   });
 };
-bot.on("message", (msg) => {
-  bot.sendMessage(msg.chat.id);
-  console.log(msg);
-});
+// bot.on("message", (msg) => {
+//   bot.sendMessage(msg.chat.id);
+//   console.log(msg);
+// });
 exports.dashboard = async (req, res) => {
   if (localStorage.getItem("admin")) {
     Contact.find().then((client) => {
