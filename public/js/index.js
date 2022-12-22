@@ -186,12 +186,10 @@ init();
 
 setTimeout(() => {
   document.querySelector("#loaders").classList.add("none");
-  console.log(document.querySelector("#loaders"));
 }, 3000);
 document.querySelector(".admin_icon").addEventListener("click", (e) => {
   document.querySelector(".list_item").classList.toggle("none");
   e.stopImmediatePropagation();
-  // console.log("ddddd");
 });
 document.querySelector(".list_item").addEventListener("click", (e) => {
   e.stopPropagation();

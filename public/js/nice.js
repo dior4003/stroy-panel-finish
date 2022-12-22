@@ -4346,6 +4346,7 @@
   },
   7990: function (t, e, i) {
     "use strict";
+    function n() {}
     // function n() {
     //   // function t(form, url) {
     //   //   var t = form.find("input[name=name]").val(),
@@ -4362,7 +4363,7 @@
     //   //   (l = url.substring(l, url.indexOf("&", l))),
     //   //     (data["b_" + u + "_" + l] = ""),
     //   //     o
-           
+
     //   // }
     //   function e(form) {
     //     var dialog;
@@ -12412,4 +12413,3 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       });
   },
 });
-
