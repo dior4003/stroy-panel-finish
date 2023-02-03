@@ -6803,7 +6803,7 @@ div.elementor-widget-heading .elementor-heading-title {
 /* Page Header */
 section {
   position: relative;
-  padding-top: 110px;
+  padding-top: 0px;
   padding-bottom: 110px;
 }
 .space-medium {
@@ -9313,8 +9313,8 @@ ol.style-default li:last-child {
     padding: 76px 0 0 0;
   }
   section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .icon-box.s2 {
     margin-bottom: 30px !important;

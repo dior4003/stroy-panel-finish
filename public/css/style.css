@@ -61,7 +61,7 @@
 .flag_uzb {
   position: absolute;
   right: 200%;
-  top: 20px;
+  top: 4px;
   outline: 1px solid #000;
   padding: 3px;
 }

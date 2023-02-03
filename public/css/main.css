@@ -4,14 +4,67 @@
   max-width: 800px;
   margin: 0 auto 20px;
 }
-.instagramm{
-   display: flex;
+.instagramm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #eeeeee;
+}
+.video_player {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://mahachkala.termaxpanel.ru/wa-data/public/shop/img/montazh-stenovih-sandvich-paneley.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  padding: 100px 0;
+}
+video {
+  width: 60%;
+}
+.video_player img {
+  width: 150px;
+}
+.partniyor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(128, 128, 128, 0.25);
+  margin-bottom: 15px;
+  padding: 30px 0;
+}
+.partniyor .truc_container {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+@media (max-width: 550px) {
+  .video_player {
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background: #eeeeee;
+    background-image: url(https://mahachkala.termaxpanel.ru/wa-data/public/shop/img/montazh-stenovih-sandvich-paneley.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  video {
+    width: 90%;
+  }
+  .video_player img {
+    width: 150px;
+  }
 }
-
 .shaped-form {
   position: relative;
   max-width: 500px;
